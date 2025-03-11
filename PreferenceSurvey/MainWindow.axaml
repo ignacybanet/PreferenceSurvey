@@ -3,7 +3,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="2000"
+        Height="2000"
+        Background="Bisque"
         x:Class="PreferenceSurvey.MainWindow"
         Title="PreferenceSurvey">
-    Welcome to Avalonia!
+    
+    
+        <Grid>
+            <Grid.RowDefinitions>
+                      <RowDefinition Height="Auto"/>
+                      <RowDefinition Height="*"/>
+                      <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+            
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="800"/>
+                </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
+                <TextBox Watermark="Wpisz nazwę użytkownika"
+                         Margin="20 20 10 20"/>
+                
+                <TextBlock Text="Wybierz zainteresowania: " 
+                           Margin="20 0 0 0"/>
+                
+                <CheckBox Content="Technologia"
+                          Margin="20 0 0 0"/>
+                <CheckBox Content="Gotowanie" 
+                          Margin="20 0 0 0"/>
+                <CheckBox Content="Sport" 
+                          Margin="20 0 0 0"/>
+                <CheckBox Content="Granie w gry"
+                          Margin="20 0 0 0"/>
+                
+                <Button Width="200" Height="50"
+                        BorderThickness="1" BorderBrush="Black"
+                        Content="Zatwierdź"
+                        HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            
+            
+            <Grid Grid.Row="1">
+                
+                
+                
+                
+                
+            </Grid>
+            
+            
+            <StackPanel Grid.Row="2">
+                
+            </StackPanel>
+        </Grid>
 </Window>
