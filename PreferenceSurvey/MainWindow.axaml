@@ -2,9 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        Width="2000"
-        Height="2000"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="850"
+        Width="500"
+        Height="500"
         Background="Bisque"
         x:Class="PreferenceSurvey.MainWindow"
         Title="PreferenceSurvey">
@@ -12,13 +12,13 @@
     
         <Grid>
             <Grid.RowDefinitions>
-                      <RowDefinition Height="Auto"/>
-                      <RowDefinition Height="*"/>
-                      <RowDefinition Height="2*"/>
+                      <RowDefinition Height="200"/>
+                      <RowDefinition Height="200"/>
+                      <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
             
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="800"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
             
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
@@ -28,14 +28,13 @@
                 <TextBlock Text="Wybierz zainteresowania: " 
                            Margin="20 0 0 0"/>
                 
-                <CheckBox Content="Technologia"
-                          Margin="20 0 0 0"/>
-                <CheckBox Content="Gotowanie" 
-                          Margin="20 0 0 0"/>
-                <CheckBox Content="Sport" 
-                          Margin="20 0 0 0"/>
-                <CheckBox Content="Granie w gry"
-                          Margin="20 0 0 0"/>
+                
+                <ComboBox Margin="10" Width="150" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="Technologia"/>
+                    <ComboBoxItem Content="Gotowanie"/>
+                    <ComboBoxItem Content="Sport"/>
+                    <ComboBoxItem Content="Granie w gry"/>
+                </ComboBox>
                 
                 <Button Width="200" Height="50"
                         BorderThickness="1" BorderBrush="Black"
@@ -46,15 +45,55 @@
             
             <Grid Grid.Row="1">
                 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+            
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 
                 
+                <TextBlock Grid.Row="0" Grid.Column="0"
+                           Width="250" Height="35" Margin="10 60 0 0"
+                           Text="Czy lubisz Python?"/>
+                <CheckBox Grid.Row="0" Grid.Column="1" Margin="0 40 0 0"
+                          Content="Tak"/>
                 
+                <TextBlock Grid.Row="1" Grid.Column="0"
+                           Width="250" Height="35" Margin="10 20 0 10"
+                           Text="Czy często jesz cebulę?"/>
+                <CheckBox Grid.Row="1" Grid.Column="1" 
+                          Content="Tak"/>
+                
+                <TextBlock Grid.Row="2" Grid.Column="0"
+                           Width="250" Height="35" Margin="10 30 0 10"
+                           Text="Czy jadłeś dziś obiad?"/>
+                <CheckBox Grid.Row="2" Grid.Column="1"
+                          Content="Tak"/>
+                
+                <TextBlock Grid.Row="3" Grid.Column="0"
+                           Width="250" Height="35" Margin="10 30 0 10"
+                           Text="Czy chcesz uciekać?"/>
+                <CheckBox Grid.Row="3" Grid.Column="1"
+                          Content="Tak"/>
+                
+                <TextBlock Grid.Row="4" Grid.Column="0"
+                           Width="250" Height="35" Margin="10 30 0 0"
+                           Text="Czy próbowałeś zjeść kamień?"/>
+                <CheckBox Grid.Row="4" Grid.Column="1"
+                          Content="Tak"/>
                 
             </Grid>
             
             
-            <StackPanel Grid.Row="2">
-                
-            </StackPanel>
+            <!-- <StackPanel Grid.Row="2" Margin="10 50 0 0"> -->
+            <!--     <Button Width="200" Height="50"/> -->
+            <!-- </StackPanel> -->
         </Grid>
 </Window>
