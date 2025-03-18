@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="PreferenceSurvey/App.axaml" value="PreferenceSurvey/PreferenceSurvey.csproj" />
+        <entry key="PreferenceSurvey/MainWindow.axaml" value="PreferenceSurvey/PreferenceSurvey.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

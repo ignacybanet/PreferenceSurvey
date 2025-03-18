@@ -10,11 +10,11 @@
         Title="PreferenceSurvey">
     
     
-        <Grid>
+        <Grid HorizontalAlignment="Center">
             <Grid.RowDefinitions>
-                      <RowDefinition Height="200"/>
-                      <RowDefinition Height="200"/>
-                      <RowDefinition Height="200"/>
+                      <RowDefinition Height="Auto"/>
+                      <RowDefinition Height="Auto"/>
+                      <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
             
                 <Grid.ColumnDefinitions>
@@ -22,10 +22,10 @@
                 </Grid.ColumnDefinitions>
             
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center">
-                <TextBox Watermark="Wpisz nazwę użytkownika"
-                         Margin="20 20 10 20"/>
+                <TextBox Watermark="Wpisz nazwę użytkownika" 
+                        Width="200" Margin="20 20 10 20"/>
                 
-                <TextBlock Text="Wybierz zainteresowania: " 
+                <TextBlock Text="Wybierz zainteresowania: " HorizontalAlignment="Center"
                            Margin="20 0 0 0"/>
                 
                 
@@ -43,48 +43,48 @@
             </StackPanel>
             
             
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Margin="10 20 0 0">
                 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
             
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 
                 
                 <TextBlock Grid.Row="0" Grid.Column="0"
-                           Width="250" Height="35" Margin="10 60 0 0"
+                           Width="250" Height="35" Margin="10 0 0 10"
                            Text="Czy lubisz Python?"/>
-                <CheckBox Grid.Row="0" Grid.Column="1" Margin="0 40 0 0"
+                <CheckBox Grid.Row="0" Grid.Column="1" 
                           Content="Tak"/>
                 
                 <TextBlock Grid.Row="1" Grid.Column="0"
-                           Width="250" Height="35" Margin="10 20 0 10"
+                           Width="250" Height="35" Margin="10 10 0 10"
                            Text="Czy często jesz cebulę?"/>
-                <CheckBox Grid.Row="1" Grid.Column="1" 
+                <CheckBox Grid.Row="1" Grid.Column="1"  
                           Content="Tak"/>
                 
                 <TextBlock Grid.Row="2" Grid.Column="0"
-                           Width="250" Height="35" Margin="10 30 0 10"
+                           Width="250" Height="35" Margin="10 10 0 10"
                            Text="Czy jadłeś dziś obiad?"/>
                 <CheckBox Grid.Row="2" Grid.Column="1"
                           Content="Tak"/>
                 
                 <TextBlock Grid.Row="3" Grid.Column="0"
-                           Width="250" Height="35" Margin="10 30 0 10"
+                           Width="250" Height="35" Margin="10 10 0 10"
                            Text="Czy chcesz uciekać?"/>
                 <CheckBox Grid.Row="3" Grid.Column="1"
                           Content="Tak"/>
                 
                 <TextBlock Grid.Row="4" Grid.Column="0"
-                           Width="250" Height="35" Margin="10 30 0 0"
+                           Width="250" Height="35" Margin="10 10 0 10"
                            Text="Czy próbowałeś zjeść kamień?"/>
                 <CheckBox Grid.Row="4" Grid.Column="1"
                           Content="Tak"/>
@@ -92,8 +92,21 @@
             </Grid>
             
             
-            <!-- <StackPanel Grid.Row="2" Margin="10 50 0 0"> -->
-            <!--     <Button Width="200" Height="50"/> -->
-            <!-- </StackPanel> -->
+            <StackPanel Grid.Row="2" Margin="10 10 0 0" >
+                <Button Width="200" Height="50" Margin="0 0 0 20" HorizontalAlignment="Center"
+                        BorderThickness="1" BorderBrush="Black"
+                        Content="Wyślij" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                
+                <Border BorderBrush="Black" BorderThickness="4" CornerRadius="10" Width="400" Height="150" Background="Tan">
+                    <StackPanel>
+                        <TextBlock  Text="Podsumowanie" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="UsernameSubmit" Margin="10 15 0 0" Text="Nazwa użytkownika: "/>
+                        <TextBlock x:Name="HobbiesSubmit" Margin="10 15 0 0" Text="Zainteresowania: "/>
+                        <TextBlock x:Name="YesAmount" Margin="10 15 0 0" Text="Ilość Tak: "/>
+                    </StackPanel>
+                </Border>
+                    
+                
+            </StackPanel>
         </Grid>
 </Window>
